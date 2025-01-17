@@ -1,3 +1,4 @@
+# Did not use.
 services:
   postgres:
     image: postgres:13
@@ -13,6 +14,7 @@ services:
       retries: 5
     restart: always
 
+# Did not use.
 docker run -it \
    -e POSTGRES_USER=“root” \
    -e POSTGRES_PASSWORD=“root” \
@@ -21,6 +23,8 @@ docker run -it \
    -p 5431:5432 \
    postgres:13
 
+# The one which I used (this uses docker volumes rather than volume binding).
+# To use the latter, I would list my working directory after the -v flag.
 docker run -it \
    -e POSTGRES_DB=ny_taxi \
    -e POSTGRES_USER=postgres \
@@ -30,4 +34,11 @@ docker run -it \
    --name pgdatabase \
    postgres:17-alpine
 
+# Access via:
+pgcli -h localhost -p 5432 -u postgres -d ny_taxi
+
+# Website for taxi trips:
 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
+# Data dictionary:
+https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
