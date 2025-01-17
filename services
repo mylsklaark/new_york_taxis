@@ -20,3 +20,14 @@ docker run -it \
    -v /Users/craigmiles-clarke/GitHub/docker/ny_taxi_postgres_data:/var/lib/postgresql/data \
    -p 5431:5432 \
    postgres:13
+
+docker run -it \
+   -e POSTGRES_DB=ny_taxi \
+   -e POSTGRES_USER=postgres \
+   -e POSTGRES_PASSWORD=postgres \
+   -v vol-pgdata:/var/lib/postgresql/data \
+   -p 5432:5432 \
+   --name pgdatabase \
+   postgres:17-alpine
+
+https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
