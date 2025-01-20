@@ -42,3 +42,55 @@ https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
 # Data dictionary:
 https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
+
+# PGAdmin:
+docker run -it \
+  -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+  -e PGADMIN_DEFAULT_PASSWORD="root" \
+  -p 8080:80 \
+  dpage/pgadmin4
+
+# Network:
+# Note that this didn't work because of a naming conflict.
+# Both containers are called 'pgdatabase'.
+# See below for functioning code.
+
+docker network create pg-network
+
+docker run -it \
+   -e POSTGRES_DB=ny_taxi \
+   -e POSTGRES_USER=postgres \
+   -e POSTGRES_PASSWORD=postgres \
+   -v vol-pgdata:/var/lib/postgresql/data \
+   -p 5432:5432 \
+   --network=pg-network \
+   --name pgdatabase \
+   postgres:17-alpine
+
+docker run -it \
+   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+   -e PGADMIN_DEFAULT_PASSWORD="root" \
+   -p 8080:80 \
+   --network=pg-network \
+   --name pgdatabase \
+   dpage/pgadmin4
+
+# Network revised
+
+docker run -it \
+   -e POSTGRES_DB=ny_taxi \
+   -e POSTGRES_USER=postgres \
+   -e POSTGRES_PASSWORD=postgres \
+   -v vol-pgdata:/var/lib/postgresql/data \
+   -p 5432:5432 \
+   --network=pg-network \
+   --name pgdatabase \
+   postgres:17-alpine
+
+docker run -it \
+   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+   -e PGADMIN_DEFAULT_PASSWORD="root" \
+   -p 8080:80 \
+   --network=pg-network \
+   --name pgadmin \
+   dpage/pgadmin4
