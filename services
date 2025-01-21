@@ -105,3 +105,5 @@ python ingest_data.py \
    --db=ny_taxi \
    --table_name=yellow_taxi_trips \
    --url=${URL}
+
+docker build -t taxi_ingest:v001 .
