@@ -97,6 +97,8 @@ docker run -it \
 
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
 
+# Dockerize ingest script (aborted in favour of Docker Compose)
+
 python ingest_data.py \
    --user=root \
    --password=root \

@@ -1,0 +1,33 @@
+services:
+  pgdatabase:
+    image: postgres:17-alpine
+    container_name: pgdatabase
+    environment:
+      - POSTGRES_DB=ny_taxi
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - vol-pgdata:/var/lib/postgresql/data  # Reference the volume here
+    ports:
+      - "5432:5432"  # Expose PostgreSQL port
+    networks:
+      - pg-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=root
+    ports:
+      - "8080:80"  # Expose pgAdmin on port 8080
+    networks:
+      - pg-network
+
+volumes:
+  vol-pgdata:
+    external: true  # Reference an external volume (assuming vol-pgdata already exists)
+
+networks:
+  pg-network:
+    driver: bridge  # Use the bridge network
