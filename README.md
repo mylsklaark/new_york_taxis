@@ -1,6 +1,6 @@
 ## PostgreSQL database and pgAdmin web interface
 
-A project to sets up a PostgreSQL database and pgAdmin web interface using Docker Compose. It includes two services:
+A project to set up a PostgreSQL database and pgAdmin web interface using Docker Compose. It includes two services:
  
  - a PostgreSQL container (pgdatabase) with persistent data storage
  - a pgAdmin container (pgadmin) for managing and visualizing the database. 
