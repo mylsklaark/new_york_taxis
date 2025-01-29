@@ -1,26 +1,10 @@
-# Did not use.
-services:
-  postgres:
-    image: postgres:13
-    environment:
-      POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
-      POSTGRES_DB: airflow
-    volumes:
-      - postgres-db-volume:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD", "pg_isready", "-U", "airflow"]
-      interval: 5s
-      retries: 5
-    restart: always
-
 # For volume binding, use this:
 docker run -it \
   --name ny_taxi_postgres \
   -e POSTGRES_USER=root \
   -e POSTGRES_PASSWORD=root \
   -e POSTGRES_DB=ny_taxi \
-  -v ~/docker/ny_taxi_postgres_data:/var/lib/postgresql/data \
+  -v ~/docker/data/ny_taxi_postgres_data:/var/lib/postgresql/data \
   -p 5432:5432 \
   postgres:13
 
@@ -36,15 +20,6 @@ docker run -it \
    -p 5432:5432 \
    --name pgdatabase \
    postgres:17-alpine
-
-# Access via:
-pgcli -h localhost -p 5432 -u postgres -d ny_taxi
-
-# Website for taxi trips:
-https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
-
-# Data dictionary:
-https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
 
 # PGAdmin:
 docker run -it \
@@ -97,8 +72,6 @@ docker run -it \
    --network=pg-network \
    --name pgadmin \
    dpage/pgadmin4
-
-URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
 
 # Dockerize ingest script (aborted in favour of Docker Compose)
 
