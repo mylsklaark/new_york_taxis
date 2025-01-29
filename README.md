@@ -1,13 +1,37 @@
-## PostgreSQL database and pgAdmin web interface
+## PostgreSQL Database and pgAdmin Web Interface
 
-A project to set up a PostgreSQL database and pgAdmin web interface using Docker Compose. It includes two services:
- 
- - a PostgreSQL container (pgdatabase) with persistent data storage
- - a pgAdmin container (pgadmin) for managing and visualizing the database. 
- 
- The containers are connected via a custom network (pg-network), allowing for interaction between the database and the admin interface. Data persistence is ensured with Docker volumes, enabling data to survive container restarts.
+This project sets up a **PostgreSQL database** and a **pgAdmin web interface** using **Docker Compose**. It consists of two main services:
 
+- **PostgreSQL Container (`pgdatabase`)**: A container running PostgreSQL with persistent data storage.
+- **pgAdmin Container (`pgadmin`)**: A web interface for managing and visualizing the PostgreSQL database.
 
-You can use pgcli to interact with the PostgreSQL database:
-'''bash
+The containers are connected via a custom network (`pg-network`), allowing them to communicate with each other. **Data persistence** is ensured by Docker volumes, so the data will survive container restarts.
+
+---
+
+### How to Interact with the Database
+
+You can use **pgcli** to interact with the PostgreSQL database. To connect, run the following command:
+
+```bash
 pgcli -h localhost -p 5432 -u postgres -d ny_taxi
+```
+
+### Project Folder Structure
+
+The project is organized as follows:
+
+```plaintext
+.
+├── data                                # Data files and related resources
+│   ├── ny_taxi_postgres_data          # Folder for PostgreSQL data
+│   └── yellow_tripdata_2021-01.csv    # Data file for yellow taxi trips
+├── docker                              # Docker-related files for container setup
+│   ├── Dockerfile                     # Dockerfile to build custom images
+│   └── docker-compose.yaml            # Docker Compose configuration
+├── requirements.txt                   # Python dependencies for the project
+├── README.md                          # Project documentation
+└── src                                 # Source code for the project
+    ├── data_ingestion                 # Scripts for ingesting data into PostgreSQL
+    ├── pipelines                      # Pipeline automation scripts
+    └── services                       # Backend services (API, workers, etc.)
