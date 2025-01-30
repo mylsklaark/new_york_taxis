@@ -16,7 +16,7 @@ def main(params):
     
     csv_name = 'output.csv'
     
-    os.system(f"wget {url} -0 {csv_name}")
+    os.system(f"wget {url} -O {csv_name}")
 
     engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
 
@@ -47,6 +47,7 @@ def main(params):
         print('Inserted another chunk..., took %.3f seconds' % (t_end - t_start))
 
 if __name__ == '__main__':
+    
     parser = argparse.ArgumentParser(description='Ingest CSV data to Postgres')
 
     parser.add_argument('--user', help='username for postgres')

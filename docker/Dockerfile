@@ -1,8 +1,8 @@
 FROM python:3.9
 
-RUN pip install pandas
+RUN pip install pandas sqlalchemy psycopg2
 
 WORKDIR /app
-COPY pipeline.py pipeline.py
+COPY src/data_ingestion/ingest_data_edit.py ingest_data_edit.py
 
-ENTRYPOINT [ "python", "pipeline.py" ]
+ENTRYPOINT [ "python",  "ingest_data_edit.py" ]
