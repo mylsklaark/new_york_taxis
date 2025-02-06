@@ -48,7 +48,12 @@ docker run -it \
 
 docker build -t taxi_ingest:v001 .
 
+# When building from root directory, use the below:
+
+docker build -f docker/Dockerfile -t taxi_ingest:v001 .
+
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/misc/taxi_zone_lookup.csv"
 
 docker run -it \
    --network=pg-network \
@@ -60,3 +65,21 @@ docker run -it \
       --db=ny_taxi \
       --table_name=yellow_taxi_trips \
       --url=${URL}
+
+# Below is modified command following edit of ingest data script to accept two tables. Check why network reverts to 'docker_pg-network'
+
+export URL_1="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+export URL_2="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/misc/taxi_zone_lookup.csv"
+
+docker run -it \
+   --network=pg-network \
+   taxi_ingest:v001 \
+   --user=root \
+   --password=root \
+   --host=pgdatabase \
+   --port=5432 \
+   --db=ny_taxi \
+   --table_name_1=ny_taxi_trips \
+   --table_name_2=zone_lookup \
+   --url="${URL_1}" \
+   --url_2="${URL_2}"
