@@ -1,5 +1,7 @@
 ## PostgreSQL Database, pgAdmin Web Interface, and Data Ingestion
 
+This text is no longer an accurate reflection of the contents of this repository as of February 2025. I will update it once I have completed the project.
+
 This project sets up a **PostgreSQL database**, a **pgAdmin web interface**, and a **data ingestion pipeline** using **Docker**. It consists of three main containers:
 
 - **PostgreSQL Container (`ny_taxi_postgres`)**: A container running PostgreSQL 13, hosting the `ny_taxi` database. This container is responsible for storing the data (e.g., yellow taxi trips) ingested into the database. It listens on port `5432` and has persistent storage configured via Docker volumes, ensuring data is not lost during container restarts.
