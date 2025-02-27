@@ -1,9 +1,12 @@
+id: postgres_taxi
+namespace: zoomcamp
+
 inputs:
   - id: taxi
     type: SELECT
     displayName: Select taxi type
     values: [yellow, green]
-    defaults: yellow
+    defaults: 'yellow'
 
   - id: year
     type: SELECT
@@ -24,20 +27,27 @@ variables:
   data: "{{outputs.extract.outputFiles[inputs.taxi ~ '_tripdata_' ~ inputs.year ~ '-' ~ inputs.month ~ '.csv']}}"
 
 tasks:
-  - id: set_label
-    type: io.kestra.plugin.core.execution.Labels
-    labels:
-      file: "{{render(vars.file)}}"
-      taxi: "{{inputs.taxi}}"
+- id: set_label
+  type: io.kestra.plugin.core.execution.Labels
+  labels:
+    file: "{{render(vars.file)}}"
+    taxi: "{{inputs.taxi}}"
 
-  - id: extract
-    type: io.kestra.plugin.scripts.shell.Commands
-    outputFiles:
-      - "*.csv"
-    taskRunner:
-      type: io.kestra.plugin.core.runner.Process
-    commands:
-      - wget -qO- https://github.com/DataTalksClub/nyc-tlc-data/releases/download/{{inputs.taxi}}/{{render(vars.file)}}.gz | gunzip > {{render(vars.file)}}
+- id: extract
+  type: io.kestra.plugin.scripts.shell.Commands
+  outputFiles:
+    - "*.csv"
+  taskRunner:
+    type: io.kestra.plugin.core.runner.Process
+  commands:
+    - wget -qO- https://github.com/DataTalksClub/nyc-tlc-data/releases/download/{{inputs.taxi}}/{{render(vars.file)}}.gz | gunzip > {{render(vars.file)}}
+
+pluginDefaults:
+- type: io.kestra.plugin.jbdc.postgresql
+  values:
+    url: jdbc:postgresql://host.docker.internal:5432/postgres-zoomcamp
+    username: kestra
+    password: k3str4
 
   - id: if_yellow_taxi
     type: io.kestra.plugin.core.flow.If
@@ -263,3 +273,10 @@ pluginDefaults:
       url: jdbc:postgresql://host.docker.internal:5432/postgres-zoomcamp
       username: kestra
       password: k3str4
+
+triggers:
+- id: green_schedule
+  type: io.kestra.plugin.core.trigger.Schedule
+  cron: "0 10 1 * *"
+  inputs:
+    taxi: green
