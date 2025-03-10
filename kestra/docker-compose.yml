@@ -22,7 +22,7 @@ services:
   kestra:
     image: kestra/kestra:latest
     pull_policy: always
-    # Note that this setup with a root user is intended for development purpose.
+    # Note that this setup with a root user is intended for development purposes.
     # Our base image runs without root, but the Docker Compose implementation needs root to access the Docker socket
     # To run Kestra in a rootless mode in production, see: https://kestra.io/docs/installation/podman-compose
     user: "root"
@@ -43,7 +43,7 @@ services:
           server:
             basicAuth:
               enabled: false
-              username: "admin@kestra.io" # it must be a valid email address
+              username: "admin@kestra.io"
               password: kestra
           repository:
             type: postgres
