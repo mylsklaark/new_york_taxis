@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: staging
+    database: postgres_zoomcamp
+    schema: public
+
+    tables:
+     
+     - name: green_tripdata
+     - name: yellow_tripdata
+       
+       

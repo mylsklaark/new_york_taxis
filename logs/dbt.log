@@ -1,12 +1,12 @@
-[0m22:27:58.749853 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102fbcee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e610a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e613d0>]}
+[0m21:21:18.776699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10329de80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10414a130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10414a460>]}
 
 
-============================== 22:27:58.752415 | 127f3827-4b68-4a7a-8425-1072b5535232 ==============================
-[0m22:27:58.752415 [info ] [MainThread]: Running with dbt=1.9.3
-[0m22:27:58.752761 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/craigmiles-clarke/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
-[0m22:28:11.126511 [debug] [MainThread]: Starter project path: /Users/craigmiles-clarke/GitHub/new_york_taxis/.venv/lib/python3.9/site-packages/dbt/include/starter_project
-[0m22:28:11.139459 [info ] [MainThread]: 
-Your new dbt project "taxi_rides_ny" was created!
+============================== 21:21:18.779476 | 4c7024b7-5036-407b-b814-c8b9ce84327f ==============================
+[0m21:21:18.779476 [info ] [MainThread]: Running with dbt=1.9.3
+[0m21:21:18.779834 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/Users/craigmiles-clarke/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:21:31.164686 [debug] [MainThread]: Starter project path: /Users/craigmiles-clarke/GitHub/new_york_taxis/.venv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m21:21:31.177056 [info ] [MainThread]: 
+Your new dbt project "taxi_trips_ny" was created!
 
 For more information on how to configure the profiles.yml file,
 please consult the dbt documentation here:
@@ -21,90 +21,153 @@ Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
 
 Happy modeling!
 
-[0m22:28:11.140764 [info ] [MainThread]: Setting up your profile.
-[0m22:28:48.735763 [info ] [MainThread]: Profile taxi_rides_ny written to /Users/craigmiles-clarke/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
-[0m22:28:48.749489 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 50.041424, "process_in_blocks": "0", "process_kernel_time": 0.155804, "process_mem_max_rss": "86966272", "process_out_blocks": "0", "process_user_time": 0.68207}
-[0m22:28:48.750592 [debug] [MainThread]: Command `dbt init` succeeded at 22:28:48.750401 after 50.04 seconds
-[0m22:28:48.751850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102fbcee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e28dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103eae820>]}
-[0m22:28:48.753375 [debug] [MainThread]: Flushing usage events
-[0m22:28:49.226253 [debug] [MainThread]: An error was encountered while trying to flush usage events
-[0m22:30:22.090926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102cb5eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103b61100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103b61430>]}
+[0m21:21:31.178563 [info ] [MainThread]: Setting up your profile.
+[0m21:22:30.665442 [info ] [MainThread]: Profile taxi_trips_ny written to /Users/craigmiles-clarke/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m21:22:30.673507 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 71.938515, "process_in_blocks": "0", "process_kernel_time": 0.177881, "process_mem_max_rss": "87703552", "process_out_blocks": "0", "process_user_time": 0.677055}
+[0m21:22:30.674366 [debug] [MainThread]: Command `dbt init` succeeded at 21:22:30.674189 after 71.94 seconds
+[0m21:22:30.675288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10329de80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103bd1cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104124520>]}
+[0m21:22:30.675966 [debug] [MainThread]: Flushing usage events
+[0m21:22:31.112246 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:22:40.644979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d49e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121709130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121709460>]}
 
 
-============================== 22:30:22.093620 | 0c750874-be57-4c4d-8a89-447705082807 ==============================
-[0m22:30:22.093620 [info ] [MainThread]: Running with dbt=1.9.3
-[0m22:30:22.093968 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/craigmiles-clarke/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
-[0m22:30:22.101211 [info ] [MainThread]: dbt version: 1.9.3
-[0m22:30:22.101445 [info ] [MainThread]: python version: 3.9.6
-[0m22:30:22.101629 [info ] [MainThread]: python path: /Users/craigmiles-clarke/GitHub/new_york_taxis/.venv/bin/python3
-[0m22:30:22.101802 [info ] [MainThread]: os info: macOS-15.3.2-arm64-arm-64bit
-[0m22:30:22.146896 [info ] [MainThread]: Using profiles dir at /Users/craigmiles-clarke/.dbt
-[0m22:30:22.147184 [info ] [MainThread]: Using profiles.yml file at /Users/craigmiles-clarke/.dbt/profiles.yml
-[0m22:30:22.147371 [info ] [MainThread]: Using dbt_project.yml file at /Users/craigmiles-clarke/GitHub/new_york_taxis/dbt_project.yml
-[0m22:30:22.147599 [error] [MainThread]: Encountered an error:
+============================== 21:22:40.647653 | 961bd685-e74d-48df-90d5-e6c79bfb613a ==============================
+[0m21:22:40.647653 [info ] [MainThread]: Running with dbt=1.9.3
+[0m21:22:40.648001 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/craigmiles-clarke/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m21:22:40.655571 [info ] [MainThread]: dbt version: 1.9.3
+[0m21:22:40.655809 [info ] [MainThread]: python version: 3.9.6
+[0m21:22:40.655993 [info ] [MainThread]: python path: /Users/craigmiles-clarke/GitHub/new_york_taxis/.venv/bin/python3
+[0m21:22:40.656164 [info ] [MainThread]: os info: macOS-15.3.2-arm64-arm-64bit
+[0m21:22:40.691091 [info ] [MainThread]: Using profiles dir at /Users/craigmiles-clarke/.dbt
+[0m21:22:40.691363 [info ] [MainThread]: Using profiles.yml file at /Users/craigmiles-clarke/.dbt/profiles.yml
+[0m21:22:40.691546 [info ] [MainThread]: Using dbt_project.yml file at /Users/craigmiles-clarke/GitHub/new_york_taxis/dbt_project.yml
+[0m21:22:40.691774 [error] [MainThread]: Encountered an error:
 Internal Error
   Profile should not be None if loading profile completed
-[0m22:30:22.149084 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.09997713, "process_in_blocks": "0", "process_kernel_time": 0.09416, "process_mem_max_rss": "91127808", "process_out_blocks": "0", "process_user_time": 0.654125}
-[0m22:30:22.149339 [debug] [MainThread]: Command `dbt debug` failed at 22:30:22.149286 after 0.10 seconds
-[0m22:30:22.149536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102cb5eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103b3cbb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e30670>]}
-[0m22:30:22.149742 [debug] [MainThread]: Flushing usage events
-[0m22:30:22.589591 [debug] [MainThread]: An error was encountered while trying to flush usage events
-[0m22:43:50.587440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d99eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104046fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104046b80>]}
+[0m21:22:40.692570 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.08673692, "process_in_blocks": "0", "process_kernel_time": 0.094418, "process_mem_max_rss": "91209728", "process_out_blocks": "0", "process_user_time": 0.6628}
+[0m21:22:40.692796 [debug] [MainThread]: Command `dbt debug` failed at 21:22:40.692750 after 0.09 seconds
+[0m21:22:40.692986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d49e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1210f70a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1217a2cd0>]}
+[0m21:22:40.693185 [debug] [MainThread]: Flushing usage events
+[0m21:22:41.069212 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:24:34.555207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b5de50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a00f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a00be0>]}
 
 
-============================== 22:43:50.591034 | 41afe673-2bf6-46a5-90e9-3d8c983211ae ==============================
-[0m22:43:50.591034 [info ] [MainThread]: Running with dbt=1.9.3
-[0m22:43:50.591418 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/craigmiles-clarke/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
-[0m22:43:50.598837 [info ] [MainThread]: dbt version: 1.9.3
-[0m22:43:50.599091 [info ] [MainThread]: python version: 3.9.6
-[0m22:43:50.599281 [info ] [MainThread]: python path: /Users/craigmiles-clarke/GitHub/new_york_taxis/.venv/bin/python3
-[0m22:43:50.599456 [info ] [MainThread]: os info: macOS-15.3.2-arm64-arm-64bit
-[0m22:43:50.683980 [info ] [MainThread]: Using profiles dir at /Users/craigmiles-clarke/.dbt
-[0m22:43:50.684283 [info ] [MainThread]: Using profiles.yml file at /Users/craigmiles-clarke/.dbt/profiles.yml
-[0m22:43:50.684474 [info ] [MainThread]: Using dbt_project.yml file at /Users/craigmiles-clarke/GitHub/new_york_taxis/dbt_project.yml
-[0m22:43:50.684776 [info ] [MainThread]: adapter type: postgres
-[0m22:43:50.684999 [info ] [MainThread]: adapter version: 1.9.0
-[0m22:43:50.685194 [info ] [MainThread]: Configuration:
-[0m22:43:50.685362 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
-[0m22:43:50.685524 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
-[0m22:43:50.685684 [info ] [MainThread]: Required dependencies:
-[0m22:43:50.685880 [debug] [MainThread]: Executing "git --help"
-[0m22:43:50.711274 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c name=value]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   reset      Reset current HEAD to the specified state\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   branch     List, create, or delete branches\n   checkout   Switch branches or restore working tree files\n   commit     Record changes to the repository\n   diff       Show changes between commits, commit and working tree, etc\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\n""
-[0m22:43:50.711795 [debug] [MainThread]: STDERR: "b''"
-[0m22:43:50.712059 [info ] [MainThread]:  - git [[32mOK found[0m]
+============================== 21:24:34.558188 | a752e8cc-6434-4558-82f8-888f12339d89 ==============================
+[0m21:24:34.558188 [info ] [MainThread]: Running with dbt=1.9.3
+[0m21:24:34.558565 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/Users/craigmiles-clarke/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m21:24:34.566083 [info ] [MainThread]: dbt version: 1.9.3
+[0m21:24:34.566329 [info ] [MainThread]: python version: 3.9.6
+[0m21:24:34.566518 [info ] [MainThread]: python path: /Users/craigmiles-clarke/GitHub/new_york_taxis/.venv/bin/python3
+[0m21:24:34.566690 [info ] [MainThread]: os info: macOS-15.3.2-arm64-arm-64bit
+[0m21:24:34.612069 [info ] [MainThread]: Using profiles dir at /Users/craigmiles-clarke/.dbt
+[0m21:24:34.612353 [info ] [MainThread]: Using profiles.yml file at /Users/craigmiles-clarke/.dbt/profiles.yml
+[0m21:24:34.612542 [info ] [MainThread]: Using dbt_project.yml file at /Users/craigmiles-clarke/GitHub/new_york_taxis/dbt_project.yml
+[0m21:24:34.612764 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m21:24:34.614116 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.099702835, "process_in_blocks": "0", "process_kernel_time": 0.130504, "process_mem_max_rss": "91029504", "process_out_blocks": "0", "process_user_time": 0.660938}
+[0m21:24:34.614407 [debug] [MainThread]: Command `dbt debug` failed at 21:24:34.614349 after 0.10 seconds
+[0m21:24:34.614627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b5de50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079da400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107acd310>]}
+[0m21:24:34.614848 [debug] [MainThread]: Flushing usage events
+[0m21:24:35.050521 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:25:03.917864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c81e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b2d0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b2d400>]}
 
-[0m22:43:50.712264 [info ] [MainThread]: Connection:
-[0m22:43:50.712478 [info ] [MainThread]:   host: localhost
-[0m22:43:50.712643 [info ] [MainThread]:   port: 5432
-[0m22:43:50.712800 [info ] [MainThread]:   user: kestra
-[0m22:43:50.712958 [info ] [MainThread]:   database: postgres-zoomcamp
-[0m22:43:50.713113 [info ] [MainThread]:   schema: new_york_taxis
-[0m22:43:50.713266 [info ] [MainThread]:   connect_timeout: 10
-[0m22:43:50.713422 [info ] [MainThread]:   role: None
-[0m22:43:50.713575 [info ] [MainThread]:   search_path: None
-[0m22:43:50.713726 [info ] [MainThread]:   keepalives_idle: 0
-[0m22:43:50.713877 [info ] [MainThread]:   sslmode: None
-[0m22:43:50.714027 [info ] [MainThread]:   sslcert: None
-[0m22:43:50.714177 [info ] [MainThread]:   sslkey: None
-[0m22:43:50.714330 [info ] [MainThread]:   sslrootcert: None
-[0m22:43:50.714482 [info ] [MainThread]:   application_name: dbt
-[0m22:43:50.714633 [info ] [MainThread]:   retries: 1
-[0m22:43:50.715012 [info ] [MainThread]: Registered adapter: postgres=1.9.0
-[0m22:43:50.774276 [debug] [MainThread]: Acquiring new postgres connection 'debug'
-[0m22:43:50.798030 [debug] [MainThread]: Using postgres connection "debug"
-[0m22:43:50.798263 [debug] [MainThread]: On debug: select 1 as id
-[0m22:43:50.798433 [debug] [MainThread]: Opening a new connection, currently in state init
-[0m22:43:50.930346 [debug] [MainThread]: SQL status: SELECT 1 in 0.132 seconds
-[0m22:43:50.931087 [debug] [MainThread]: On debug: Close
-[0m22:43:50.931363 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
 
-[0m22:43:50.931624 [info ] [MainThread]: [31m1 check failed:[0m
-[0m22:43:50.931850 [info ] [MainThread]: Project loading failed for the following reason:
+============================== 21:25:03.920842 | c513ab78-8f9c-4ecf-a075-727a5ced952d ==============================
+[0m21:25:03.920842 [info ] [MainThread]: Running with dbt=1.9.3
+[0m21:25:03.921204 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/craigmiles-clarke/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m21:25:03.928430 [info ] [MainThread]: dbt version: 1.9.3
+[0m21:25:03.928790 [info ] [MainThread]: python version: 3.9.6
+[0m21:25:03.928981 [info ] [MainThread]: python path: /Users/craigmiles-clarke/GitHub/new_york_taxis/.venv/bin/python3
+[0m21:25:03.929155 [info ] [MainThread]: os info: macOS-15.3.2-arm64-arm-64bit
+[0m21:25:03.972951 [info ] [MainThread]: Using profiles dir at /Users/craigmiles-clarke/.dbt
+[0m21:25:03.973233 [info ] [MainThread]: Using profiles.yml file at /Users/craigmiles-clarke/.dbt/profiles.yml
+[0m21:25:03.973420 [info ] [MainThread]: Using dbt_project.yml file at /Users/craigmiles-clarke/GitHub/new_york_taxis/dbt_project.yml
+[0m21:25:03.973656 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m21:25:03.974965 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.096615545, "process_in_blocks": "0", "process_kernel_time": 0.11918, "process_mem_max_rss": "91045888", "process_out_blocks": "0", "process_user_time": 0.659473}
+[0m21:25:03.975220 [debug] [MainThread]: Command `dbt debug` failed at 21:25:03.975165 after 0.10 seconds
+[0m21:25:03.975415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c81e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107bc7cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e02a30>]}
+[0m21:25:03.975634 [debug] [MainThread]: Flushing usage events
+[0m21:25:04.392269 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:27:34.821415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102c89e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103b35130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103b35460>]}
+
+
+============================== 21:27:34.824259 | 09724a2c-f78f-43c1-ad91-137b639de1fc ==============================
+[0m21:27:34.824259 [info ] [MainThread]: Running with dbt=1.9.3
+[0m21:27:34.824621 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/Users/craigmiles-clarke/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:27:34.832024 [info ] [MainThread]: dbt version: 1.9.3
+[0m21:27:34.832242 [info ] [MainThread]: python version: 3.9.6
+[0m21:27:34.832418 [info ] [MainThread]: python path: /Users/craigmiles-clarke/GitHub/new_york_taxis/.venv/bin/python3
+[0m21:27:34.832587 [info ] [MainThread]: os info: macOS-15.3.2-arm64-arm-64bit
+[0m21:27:34.879293 [info ] [MainThread]: Using profiles dir at /Users/craigmiles-clarke/.dbt
+[0m21:27:34.879568 [info ] [MainThread]: Using profiles.yml file at /Users/craigmiles-clarke/.dbt/profiles.yml
+[0m21:27:34.879757 [info ] [MainThread]: Using dbt_project.yml file at /Users/craigmiles-clarke/GitHub/new_york_taxis/dbt_project.yml
+[0m21:27:34.879982 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m21:27:34.881299 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.101866625, "process_in_blocks": "0", "process_kernel_time": 0.129074, "process_mem_max_rss": "90587136", "process_out_blocks": "0", "process_user_time": 0.657995}
+[0m21:27:34.881526 [debug] [MainThread]: Command `dbt debug` failed at 21:27:34.881477 after 0.10 seconds
+[0m21:27:34.881713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102c89e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1037240a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103bcecd0>]}
+[0m21:27:34.881916 [debug] [MainThread]: Flushing usage events
+[0m21:27:35.296659 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:28:01.605077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103002e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103eac130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103eac460>]}
+
+
+============================== 21:28:01.608104 | 92261444-89b6-4ac0-aa5f-e27e07c97c23 ==============================
+[0m21:28:01.608104 [info ] [MainThread]: Running with dbt=1.9.3
+[0m21:28:01.608483 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/craigmiles-clarke/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:28:01.615151 [info ] [MainThread]: dbt version: 1.9.3
+[0m21:28:01.615383 [info ] [MainThread]: python version: 3.9.6
+[0m21:28:01.615563 [info ] [MainThread]: python path: /Users/craigmiles-clarke/GitHub/new_york_taxis/.venv/bin/python3
+[0m21:28:01.615737 [info ] [MainThread]: os info: macOS-15.3.2-arm64-arm-64bit
+[0m21:28:01.658565 [info ] [MainThread]: Using profiles dir at /Users/craigmiles-clarke/.dbt
+[0m21:28:01.658846 [info ] [MainThread]: Using profiles.yml file at /Users/craigmiles-clarke/.dbt/profiles.yml
+[0m21:28:01.659035 [info ] [MainThread]: Using dbt_project.yml file at /Users/craigmiles-clarke/GitHub/new_york_taxis/dbt_project.yml
+[0m21:28:01.659359 [info ] [MainThread]: adapter type: postgres
+[0m21:28:01.659571 [info ] [MainThread]: adapter version: 1.9.0
+[0m21:28:01.659753 [info ] [MainThread]: Configuration:
+[0m21:28:01.659916 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:28:01.660075 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m21:28:01.660233 [info ] [MainThread]: Required dependencies:
+[0m21:28:01.660418 [debug] [MainThread]: Executing "git --help"
+[0m21:28:01.690272 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c name=value]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   reset      Reset current HEAD to the specified state\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   branch     List, create, or delete branches\n   checkout   Switch branches or restore working tree files\n   commit     Record changes to the repository\n   diff       Show changes between commits, commit and working tree, etc\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\n""
+[0m21:28:01.690798 [debug] [MainThread]: STDERR: "b''"
+[0m21:28:01.691037 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:28:01.691265 [info ] [MainThread]: Connection:
+[0m21:28:01.691483 [info ] [MainThread]:   host: localhost
+[0m21:28:01.691646 [info ] [MainThread]:   port: 5432
+[0m21:28:01.691800 [info ] [MainThread]:   user: kestra
+[0m21:28:01.691953 [info ] [MainThread]:   database: postgres-zoomcamp
+[0m21:28:01.692108 [info ] [MainThread]:   schema: new_york_taxis
+[0m21:28:01.692260 [info ] [MainThread]:   connect_timeout: 10
+[0m21:28:01.692413 [info ] [MainThread]:   role: None
+[0m21:28:01.692575 [info ] [MainThread]:   search_path: None
+[0m21:28:01.692726 [info ] [MainThread]:   keepalives_idle: 0
+[0m21:28:01.692879 [info ] [MainThread]:   sslmode: None
+[0m21:28:01.693028 [info ] [MainThread]:   sslcert: None
+[0m21:28:01.693178 [info ] [MainThread]:   sslkey: None
+[0m21:28:01.693329 [info ] [MainThread]:   sslrootcert: None
+[0m21:28:01.693480 [info ] [MainThread]:   application_name: dbt
+[0m21:28:01.693633 [info ] [MainThread]:   retries: 1
+[0m21:28:01.694006 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m21:28:01.754634 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m21:28:01.788388 [debug] [MainThread]: Using postgres connection "debug"
+[0m21:28:01.788627 [debug] [MainThread]: On debug: select 1 as id
+[0m21:28:01.788797 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:28:01.876951 [debug] [MainThread]: SQL status: SELECT 1 in 0.088 seconds
+[0m21:28:01.877544 [debug] [MainThread]: On debug: Close
+[0m21:28:01.877739 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:28:01.877935 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:28:01.878104 [info ] [MainThread]: Project loading failed for the following reason:
  project path </Users/craigmiles-clarke/GitHub/new_york_taxis/dbt_project.yml> not found
 
-[0m22:43:50.933600 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.39177147, "process_in_blocks": "0", "process_kernel_time": 0.184055, "process_mem_max_rss": "101122048", "process_out_blocks": "0", "process_user_time": 0.724667}
-[0m22:43:50.933913 [debug] [MainThread]: Command `dbt debug` failed at 22:43:50.933845 after 0.39 seconds
-[0m22:43:50.934159 [debug] [MainThread]: Connection 'debug' was properly closed.
-[0m22:43:50.934394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d99eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043693a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043767f0>]}
-[0m22:43:50.934686 [debug] [MainThread]: Flushing usage events
-[0m22:43:51.380972 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:28:01.879288 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.31275845, "process_in_blocks": "0", "process_kernel_time": 0.169798, "process_mem_max_rss": "103055360", "process_out_blocks": "0", "process_user_time": 0.728614}
+[0m21:28:01.879541 [debug] [MainThread]: Command `dbt debug` failed at 21:28:01.879486 after 0.31 seconds
+[0m21:28:01.879742 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:28:01.879930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103002e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10419cd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10419cdc0>]}
+[0m21:28:01.880167 [debug] [MainThread]: Flushing usage events
+[0m21:28:02.251216 [debug] [MainThread]: An error was encountered while trying to flush usage events
