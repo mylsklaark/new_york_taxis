@@ -1,6 +1,6 @@
 ## PostgreSQL Database, pgAdmin Web Interface, and Data Ingestion
 
-This text is no longer an accurate reflection of the contents of this repository as of February 2025. I will update it once I have completed the project.
+This text is no longer an accurate reflection of the contents of this repository as of March 2025. I will update it once I have completed the project.
 
 This project sets up a **PostgreSQL database**, a **pgAdmin web interface**, and a **data ingestion pipeline** using **Docker**. It consists of three main containers:
 
