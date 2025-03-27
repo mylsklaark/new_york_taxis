@@ -23,7 +23,7 @@ services:
       - "8080:80"
     networks:
       - pg-network
-
+    
 volumes:
   vol-pgdata:
     external: true
